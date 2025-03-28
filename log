@@ -21,3 +21,9 @@ Fri, Mar 28, 2025  2:15:37 PM:
  tests:  5|4
 total_score: 25/70
 6716956
+Fri, Mar 28, 2025  2:31:21 PM: 
+ list.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+ tests:  9|3
+total_score: 35/70
+19834e0
