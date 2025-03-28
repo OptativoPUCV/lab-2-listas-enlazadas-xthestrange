@@ -103,7 +103,27 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+    if (list->current == NULL) return NULL;
+    
+    void * eliminar = list->current->data;
+
+    if (list->current->prev != NULL) {
+        list->current->prev->next = list->current->next;
+    } else {
+        list->head = list->current->next;
+    }
+
+    if (list->current->next != NULL) {
+        list->current->next->prev = list->current->prev;
+    } else {
+        list->tail = list->current->prev;
+    }
+
+    Node * auxiliar = list->current;
+    list->current = list->current->next;
+
+    free(auxiliar);
+    return eliminar;
 }
 
 void cleanList(List * list) {
